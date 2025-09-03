@@ -32,7 +32,7 @@ export default function ContactPage() {
     <section className="max-w-xl">
       <h1 className="text-2xl font-semibold mb-3">Contact</h1>
       <p className="text-sm text-black/70 dark:text-white/70 mb-6">
-        I'm open to part-time working student positions in Bavaria, Germany. I'm ready to work on-site and contribute to agile teams. Please reach me via the links below for opportunities or collaborations.
+        I&apos;m open to part-time working student positions in Bavaria, Germany. I&apos;m ready to work on-site and contribute to agile teams. Please reach me via the links below for opportunities or collaborations.
       </p>
       <div className="space-y-3">
         <a href="mailto:hmida01@ads.uni-passau.de" className="flex items-center gap-3 group">

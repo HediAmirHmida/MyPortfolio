@@ -18,15 +18,15 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
 
   return (
     <>
-      <article className="rounded-lg border border-black/10 dark:border-white/10 p-4 hover:shadow-sm transition">
-        <h3 className="font-semibold mb-1">{title}</h3>
+      <article className="rounded-lg border border-black/10 dark:border-white/10 p-6 hover:shadow-sm transition">
+        <h3 className="text-lg font-semibold mb-1">{title}</h3>
         <p className="text-sm text-black/70 dark:text-white/70 mb-3">{description}</p>
         
         {videoUrl && (
           <div className="mb-3">
             <button
               onClick={() => setShowVideo(true)}
-              className="relative w-full h-32 rounded-md overflow-hidden bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition group"
+              className="relative w-full h-40 rounded-md overflow-hidden bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition group"
             >
               <video
                 src={videoUrl}
@@ -50,9 +50,9 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
         {technologies.length > 0 && (
           <div className="mb-3">
             <h4 className="text-xs font-medium text-black/60 dark:text-white/60 mb-2">Technologies</h4>
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1.5">
               {technologies.map((tech) => (
-                <span key={tech} className="text-xs rounded-full px-2 py-0.5 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20">
+                <span key={tech} className="text-sm rounded-full px-2.5 py-0.5 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20">
                   {tech}
                 </span>
               ))}
@@ -70,7 +70,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {tags.map((t) => (
-                <span key={t} className="rounded-full px-2 py-0.5 border border-black/10 dark:border-white/10">
+                <span key={t} className="text-sm rounded-full px-2 py-0.5 border border-black/10 dark:border-white/10">
                   {t}
                 </span>
               ))}

@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className="md:col-span-2 rounded-lg border border-black/10 dark:border-white/10 p-5">
           <h2 className="text-lg font-semibold mb-2">About me</h2>
           <p className="text-sm text-black/80 dark:text-white/80">
-            Master's student in Computer Science at the University of Passau with hands-on industry experience in full-stack
+            Master&apos;s student in Computer Science at the University of Passau with hands-on industry experience in full-stack
             web and mobile development. Delivered real-world projects during two internships and built apps using React,
             Flutter, Node.js, and MySQL. Actively seeking a working student role in backend, QA, or full-stack development to
             contribute to agile teams and grow in a modern software engineering environment.
@@ -160,7 +160,7 @@ export default function AboutPage() {
           <h2 className="text-lg font-semibold mb-3">Education</h2>
           <div className="space-y-4">
             <div>
-              <div className="font-medium text-sm">Master's Degree in Computer Science</div>
+              <div className="font-medium text-sm">Master&apos;s Degree in Computer Science</div>
               <div className="text-sm text-black/70 dark:text-white/70">Faculty of Computer Science and Mathematics, University of Passau</div>
               <div className="text-xs text-black/60 dark:text-white/60">2024 - Present (Current Student)</div>
             </div>

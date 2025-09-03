@@ -1,13 +1,12 @@
-import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   return (
     <div className="space-y-12">
       <section className="py-16">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Hi, I'm Hedi Amir Hmida</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">Hi, I&apos;m Hedi Amir Hmida</h1>
         <p className="text-black/70 dark:text-white/70 max-w-2xl mb-6">
-          Software Engineer and Master's student in Computer Science at the University of Passau.
+          Software Engineer and Master&apos;s student in Computer Science at the University of Passau.
           I build full‑stack web and mobile applications with modern frameworks, focusing on
           clean architecture, performance, and great developer/user experience.
         </p>
