@@ -5,15 +5,21 @@ export default function Home() {
     <div className="space-y-12">
       <section className="py-16">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Hi, I&apos;m Hedi Amir Hmida</h1>
-        <p className="text-black/70 dark:text-white/70 max-w-2xl mb-6">
+        <p className="text-white/80 max-w-2xl mb-6">
           Software Engineer and Master&apos;s student in Computer Science at the University of Passau.
           I build full‑stack web and mobile applications with modern frameworks, focusing on
           clean architecture, performance, and great developer/user experience.
         </p>
         <div className="flex gap-3">
-          <a href="/projects" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black">View Projects</a>
-          <a href="/contact" className="px-4 py-2 rounded-md border border-black/15 dark:border-white/20">Contact Me</a>
-          <a href="/ResumeHmidaHediAmir.pdf" download className="px-4 py-2 rounded-md border border-black/15 dark:border-white/20">Download CV</a>
+          <a href="/projects" className="inline-flex items-center rounded-md bg-white text-black px-4 py-2 text-sm font-medium shadow-sm hover:shadow transition">
+            View Projects
+          </a>
+          <a href="/contact" className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
+            Contact Me
+          </a>
+          <a href="/ResumeHmidaHediAmir.pdf" download className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
+            Download CV
+          </a>
         </div>
       </section>
       <section>

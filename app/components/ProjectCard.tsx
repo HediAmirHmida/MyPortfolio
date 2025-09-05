@@ -18,15 +18,15 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
 
   return (
     <>
-      <article className="rounded-lg border border-black/10 dark:border-white/10 p-6 hover:shadow-sm transition">
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <p className="text-sm text-black/70 dark:text-white/70 mb-3">{description}</p>
+      <article className="rounded-lg border border-white/20 p-6 hover:shadow-sm transition bg-black/20">
+        <h3 className="text-lg font-semibold mb-1 text-white">{title}</h3>
+        <p className="text-sm text-white/80 mb-3">{description}</p>
         
         {videoUrl && (
           <div className="mb-3">
             <button
               onClick={() => setShowVideo(true)}
-              className="relative w-full h-40 rounded-md overflow-hidden bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition group"
+              className="relative w-full h-40 rounded-md overflow-hidden bg-white/10 hover:bg-white/15 transition group"
             >
               <video
                 src={videoUrl}
@@ -37,8 +37,8 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
                 onMouseLeave={(e) => (e.target as HTMLVideoElement).pause()}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-white/90 dark:bg-black/90 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-black dark:text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-full bg-black/80 text-white flex items-center justify-center">
+                  <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </div>
@@ -49,10 +49,10 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
         
         {technologies.length > 0 && (
           <div className="mb-3">
-            <h4 className="text-xs font-medium text-black/60 dark:text-white/60 mb-2">Technologies</h4>
+            <h4 className="text-xs font-medium text-white/60 mb-2">Technologies</h4>
             <div className="flex flex-wrap gap-1.5">
               {technologies.map((tech) => (
-                <span key={tech} className="text-sm rounded-full px-2.5 py-0.5 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20">
+                <span key={tech} className="text-sm rounded-full px-2.5 py-0.5 bg-white/10 border border-white/20 text-white">
                   {tech}
                 </span>
               ))}
@@ -60,7 +60,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
           </div>
         )}
         
-        <div className="flex items-center gap-2 mb-3 text-xs text-black/60 dark:text-white/60">
+        <div className="flex items-center gap-2 mb-3 text-xs text-white/60">
           {typeof stars === "number" && (
             <span className="inline-flex items-center gap-1">
               ★ <span>{stars}</span>
@@ -70,7 +70,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {tags.map((t) => (
-                <span key={t} className="text-sm rounded-full px-2 py-0.5 border border-black/10 dark:border-white/10">
+                <span key={t} className="text-sm rounded-full px-2 py-0.5 border border-white/20 text-white/80">
                   {t}
                 </span>
               ))}
@@ -83,7 +83,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-white text-black dark:bg-white dark:text-black px-3.5 py-2 text-sm font-medium shadow-sm hover:shadow transition"
+              className="inline-flex items-center gap-2 rounded-md bg-white text-black px-3.5 py-2 text-sm font-medium shadow-sm hover:shadow transition"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>

@@ -30,30 +30,30 @@ function IconLinkedIn(props: React.SVGProps<SVGSVGElement>) {
 export default function ContactPage() {
   return (
     <section className="max-w-xl">
-      <h1 className="text-2xl font-semibold mb-3">Contact</h1>
-      <p className="text-sm text-black/70 dark:text-white/70 mb-6">
+      <h1 className="text-2xl font-semibold mb-3 text-white">Contact</h1>
+      <p className="text-sm text-white/80 mb-6">
         I&apos;m open to part-time working student positions in Bavaria, Germany. I&apos;m ready to work on-site and contribute to agile teams. Please reach me via the links below for opportunities or collaborations.
       </p>
       <div className="space-y-3">
         <a href="mailto:hmida01@ads.uni-passau.de" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 group-hover:bg-black/10 dark:group-hover:bg-white/15 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
             <IconMail className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2">hmida01@ads.uni-passau.de</span>
+          <span className="underline underline-offset-2 text-white">hmida01@ads.uni-passau.de</span>
         </a>
 
         <a href="https://github.com/HediAmirHmida" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 group-hover:bg-black/10 dark:group-hover:bg-white/15 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
             <IconGithub className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2">github.com/HediAmirHmida</span>
+          <span className="underline underline-offset-2 text-white">github.com/HediAmirHmida</span>
         </a>
 
         <a href="https://www.linkedin.com/in/hedi-amir-hmida-233339278" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/10 group-hover:bg-black/10 dark:group-hover:bg-white/15 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
             <IconLinkedIn className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2">linkedin.com/in/hedi-amir-hmida-233339278</span>
+          <span className="underline underline-offset-2 text-white">linkedin.com/in/hedi-amir-hmida-233339278</span>
         </a>
       </div>
     </section>
