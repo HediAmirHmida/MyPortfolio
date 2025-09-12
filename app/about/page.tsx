@@ -66,7 +66,9 @@ export default function AboutPage() {
             <h3 className="text-sm font-medium text-white/70 mb-2">Frontend</h3>
             <div className="flex flex-wrap gap-2">
               {["React.js", "Next.js", "Tailwind CSS", "Flutter"].map((s) => (
-                <span key={s} className="text-xs rounded-full px-2 py-1 border border-white/20 bg-white/10 text-white"></span>
+                <span key={s} className="text-xs rounded-full px-2 py-1 border border-white/20 bg-white/10 text-white">
+                  {s}
+                </span>
               ))}
             </div>
           </div>
