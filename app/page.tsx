@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="py-16">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Hi, I&apos;m Hedi Amir Hmida</h1>
-        <p className="text-white/80 max-w-2xl mb-6">
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">Hi, I&apos;m Hedi Amir Hmida</h1>
+        <p className="text-white/85 max-w-2xl mb-8 text-lg leading-relaxed">
           Software Engineer and Master&apos;s student in Computer Science at the University of Passau.
           I build full‑stack web and mobile applications with modern frameworks, focusing on
           clean architecture, performance, and great developer/user experience.
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="text-xl font-semibold mb-4">Featured Projects</h2>
+        <h2 className="text-2xl font-bold mb-6 text-white">Featured Projects</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <ProjectCard
             title="SmartStockManager"
