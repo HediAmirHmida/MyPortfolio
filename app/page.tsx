@@ -17,7 +17,7 @@ export default function Home() {
           <a href="/contact" className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
             Contact Me
           </a>
-          <a href="/ResumeHmidaHediAmir.pdf" download className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
+          <a href="/Hmida - Resume.pdf" download className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
             Download CV
           </a>
         </div>

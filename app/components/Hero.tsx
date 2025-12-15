@@ -13,7 +13,7 @@ export default function Hero() {
         <a href="/contact" className="px-4 py-2 rounded-md border border-black/15 dark:border-white/20">
           Contact Me
         </a>
-        <a href="/ResumeHmidaHediAmir.pdf" download className="px-4 py-2 rounded-md border border-black/15 dark:border-white/20">
+        <a href="/Hmida - Resume.pdf" download className="px-4 py-2 rounded-md border border-black/15 dark:border-white/20">
           Download CV
         </a>
       </div>

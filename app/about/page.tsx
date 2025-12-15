@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="flex flex-wrap gap-3">
-          <a href="/ResumeHmidaHediAmir.pdf" download className="px-3 py-1.5 rounded-md border border-white/20 text-sm hover:bg-white/10 transition">Download CV</a>
+          <a href="/Hmida - Resume.pdf" download className="px-3 py-1.5 rounded-md border border-white/20 text-sm hover:bg-white/10 transition">Download CV</a>
           <a href="/contact" className="px-3 py-1.5 rounded-md border border-white/20 text-sm hover:bg-white/10 transition">Contact</a>
           <a href="https://www.linkedin.com/in/hedi-amir-hmida-233339278" target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-md border border-white/20 text-sm hover:bg-white/10 transition">LinkedIn</a>
         </div>
