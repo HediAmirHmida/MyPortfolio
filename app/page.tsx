@@ -29,7 +29,7 @@ export default function Home() {
             title="SmartStockManager"
             description="Visualize your inventory, predict restocks, and monitor earnings – all in one place. Built with modern web technologies for efficient business management."
             githubUrl="https://github.com/HediAmirHmida/SmartStockManager"
-            liveUrl="https://smart-stock-manager-suiw.vercel.app"
+            liveUrl="https://smart-stock-manager-supabase.vercel.app"
             tags={["Web App", "Inventory", "Analytics"]}
             videoUrl="/Smart Stock Managercompressed.mp4"
             technologies={["React", "Next.js", "Tailwind CSS", "TypeScript", "Prisma", "MySQL", "Vercel"]}
