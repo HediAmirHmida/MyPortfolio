@@ -1,5 +1,7 @@
+import { siteConfig } from "../../lib/site";
+
 export const metadata = {
-  title: "Contact — Amir",
+  title: "Contact",
 };
 
 function IconMail(props: React.SVGProps<SVGSVGElement>) {
@@ -30,34 +32,34 @@ function IconLinkedIn(props: React.SVGProps<SVGSVGElement>) {
 export default function ContactPage() {
   return (
     <section className="max-w-xl">
-      <h1 className="text-2xl font-semibold mb-3 text-white">Contact</h1>
-      <p className="text-sm text-white/80 mb-6">
-        I&apos;m open to part-time working student positions in Bavaria, Germany. I&apos;m ready to work on-site and contribute to agile teams. Please reach me via the links below for opportunities or collaborations.
+      <h1 className="text-3xl font-bold mb-3 text-white">Contact</h1>
+      <p className="text-base text-white/80 mb-6 leading-relaxed">
+        I&apos;m currently a Backend / Full-Stack Developer (Working Student) at Oncare GmbH in Munich
+        and studying Computer Science in Passau. Reach me below for collaborations, questions, or
+        professional conversations.
       </p>
       <div className="space-y-3">
-        <a href="mailto:hmida01@ads.uni-passau.de" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
+        <a href={`mailto:${siteConfig.email}`} className="card flex items-center gap-3 p-3 hover:border-[var(--accent)]/40 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-[var(--accent-soft)] text-[var(--accent)]">
             <IconMail className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2 text-white">hmida01@ads.uni-passau.de</span>
+          <span className="text-white">{siteConfig.email}</span>
         </a>
 
-        <a href="https://github.com/HediAmirHmida" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
+        <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer" className="card flex items-center gap-3 p-3 hover:border-[var(--accent)]/40 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-[var(--accent-soft)] text-[var(--accent)]">
             <IconGithub className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2 text-white">github.com/HediAmirHmida</span>
+          <span className="text-white">github.com/HediAmirHmida</span>
         </a>
 
-        <a href="https://www.linkedin.com/in/hedi-amir-hmida-233339278" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 bg-white/10 group-hover:bg-white/15 transition">
+        <a href={siteConfig.linkedinUrl} target="_blank" rel="noreferrer" className="card flex items-center gap-3 p-3 hover:border-[var(--accent)]/40 transition">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--border)] bg-[var(--accent-soft)] text-[var(--accent)]">
             <IconLinkedIn className="h-5 w-5" />
           </span>
-          <span className="underline underline-offset-2 text-white">linkedin.com/in/hedi-amir-hmida-233339278</span>
+          <span className="text-white">linkedin.com/in/hedi-amir-hmida-233339278</span>
         </a>
       </div>
     </section>
   );
 }
-
-

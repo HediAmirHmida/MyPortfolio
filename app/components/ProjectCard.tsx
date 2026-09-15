@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ProjectCardProps = {
   title: string;
@@ -15,10 +15,15 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ title, description, githubUrl, liveUrl, tags = [], stars, videoUrl, technologies = [] }: ProjectCardProps) {
   const [showVideo, setShowVideo] = useState(false);
+  const [mediaReady, setMediaReady] = useState(false);
+
+  useEffect(() => {
+    setMediaReady(true);
+  }, []);
 
   return (
     <>
-      <article className="rounded-lg border border-white/20 p-6 hover:shadow-sm transition bg-black/20">
+      <article className="card p-6 hover:border-[var(--accent)]/35 hover:shadow-[0_12px_40px_var(--glow)] transition">
         <h3 className="text-lg font-semibold mb-1 text-white">{title}</h3>
         <p className="text-sm text-white/80 mb-3">{description}</p>
         
@@ -28,14 +33,18 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
               onClick={() => setShowVideo(true)}
               className="relative w-full h-40 rounded-md overflow-hidden bg-white/10 hover:bg-white/15 transition group"
             >
-              <video
-                src={videoUrl}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition"
-                muted
-                loop
-                onMouseEnter={(e) => (e.target as HTMLVideoElement).play()}
-                onMouseLeave={(e) => (e.target as HTMLVideoElement).pause()}
-              />
+              {mediaReady && (
+                <video
+                  src={videoUrl}
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition"
+                  muted
+                  loop
+                  playsInline
+                  suppressHydrationWarning
+                  onMouseEnter={(e) => (e.target as HTMLVideoElement).play()}
+                  onMouseLeave={(e) => (e.target as HTMLVideoElement).pause()}
+                />
+              )}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full bg-black/80 text-white flex items-center justify-center">
                   <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -52,7 +61,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
             <h4 className="text-xs font-medium text-white/60 mb-2">Technologies</h4>
             <div className="flex flex-wrap gap-1.5">
               {technologies.map((tech) => (
-                <span key={tech} className="text-sm rounded-full px-2.5 py-0.5 bg-white/10 border border-white/20 text-white">
+                <span key={tech} className="chip !py-0.5 !px-2.5 text-sm">
                   {tech}
                 </span>
               ))}
@@ -83,7 +92,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-white text-black px-3.5 py-2 text-sm font-medium shadow-sm hover:shadow transition"
+              className="btn-primary gap-2 !py-2 !px-3.5"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -97,7 +106,7 @@ export default function ProjectCard({ title, description, githubUrl, liveUrl, ta
             href={githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-black text-white px-3.5 py-2 text-sm font-medium hover:opacity-90 transition"
+            className="btn-ghost gap-2 !py-2 !px-3.5"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 .5C5.73.5.77 5.46.77 11.73c0 4.92 3.19 9.1 7.62 10.57.56.1.77-.24.77-.55v-2c-3.1.68-3.76-1.33-3.76-1.33-.51-1.28-1.25-1.62-1.25-1.62-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1.01 1.74 2.65 1.24 3.3.95.1-.74.4-1.24.73-1.53-2.48-.28-5.1-1.24-5.1-5.55 0-1.23.43-2.23 1.14-3.02-.11-.28-.5-1.44.11-3 0 0 .95-.3 3.1 1.19.86-.24 1.78-.38 2.7-.38.92 0 1.84.13 2.7.38 2.15-1.49 3.1-1.19 3.1-1.19.61 1.56.22 2.72.11 3 .71.79 1.14 1.79 1.14 3.02 0 4.32-2.62 5.27-5.12 5.55.41.35.77 1.03.77 2.08v3.08c0 .31.21.65.78.55 4.43-1.47 7.62-5.65 7.62-10.57C23.23 5.46 18.27.5 12 .5Z"/>

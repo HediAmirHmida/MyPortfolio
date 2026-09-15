@@ -1,23 +1,33 @@
 import ProjectCard from "./components/ProjectCard";
+import { siteConfig } from "../lib/site";
 
 export default function Home() {
   return (
     <div className="space-y-12">
-      <section className="py-16">
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">Hi, I&apos;m Hedi Amir Hmida</h1>
-        <p className="text-white/85 max-w-2xl mb-8 text-lg leading-relaxed">
-          Software Engineer and Master&apos;s student in Computer Science at the University of Passau.
-          I build full‑stack web and mobile applications with modern frameworks, focusing on
-          clean architecture, performance, and great developer/user experience.
+      <section className="py-12 sm:py-16">
+        <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--accent-soft)] px-3 py-1 text-sm font-medium text-[var(--accent)]">
+          <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
+          Currently at Oncare GmbH · Munich
         </p>
-        <div className="flex gap-3">
-          <a href="/projects" className="inline-flex items-center rounded-md bg-white text-black px-4 py-2 text-sm font-medium shadow-sm hover:shadow transition">
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">
+          Hi, I&apos;m Hedi Amir Hmida
+        </h1>
+        <p className="text-white/80 max-w-2xl mb-8 text-lg leading-relaxed">
+          Backend / Full-Stack Developer (Working Student) and Master&apos;s student in Computer Science
+          at the University of Passau. I integrate AI into healthcare platforms, design reliable NestJS
+          backends, and ship React interfaces with a focus on architecture, testing, and user experience.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a href="/projects" className="btn-primary">
             View Projects
           </a>
-          <a href="/contact" className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
-            Contact Me
+          <a href="/about" className="btn-ghost">
+            About me
           </a>
-          <a href="/Hmida - Resume.pdf" download className="inline-flex items-center rounded-md border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition">
+          <a href="/contact" className="btn-ghost">
+            Contact
+          </a>
+          <a href={siteConfig.resumeHref} download className="btn-ghost">
             Download CV
           </a>
         </div>

@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import { fetchGithubRepos } from "../../lib/github";
 import { siteConfig } from "../../lib/site";
 
-export const metadata = { title: "Projects — Amir" };
+export const metadata = { title: "Projects" };
 
 export default async function ProjectsPage() {
   const repos = await fetchGithubRepos();
@@ -15,8 +15,8 @@ export default async function ProjectsPage() {
   return (
     <section className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold mb-2">Projects</h1>
-        <p className="text-sm text-black/70 dark:text-white/70">
+        <h1 className="text-3xl font-bold mb-2">Projects</h1>
+        <p className="text-base text-white/75">
           A showcase of my development work, from full-stack web applications to mobile apps and backend systems. Each project demonstrates different technologies and problem-solving approaches.
         </p>
       </div>
@@ -28,7 +28,7 @@ export default async function ProjectsPage() {
         </div>
       )}
       {repos.length === 0 ? (
-        <p className="text-sm text-black/70 dark:text-white/70">
+        <p className="text-sm text-white/70">
           {username ? "No repositories found or API limit reached." : "Set NEXT_PUBLIC_GITHUB_USERNAME in .env.local to load repos."}
         </p>
       ) : (

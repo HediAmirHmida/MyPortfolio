@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#070b14",
 };
 
 export default function RootLayout({
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col text-base sm:text-lg bg-black text-white leading-relaxed`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col text-base sm:text-lg bg-background text-foreground leading-relaxed`}
       >
         <Providers>
           <Navbar />
