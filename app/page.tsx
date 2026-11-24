@@ -7,15 +7,15 @@ export default function Home() {
       <section className="py-12 sm:py-16">
         <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--accent-soft)] px-3 py-1 text-sm font-medium text-[var(--accent)]">
           <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
-          Currently at Oncare GmbH · Munich
+          Master&apos;s student · University of Passau
         </p>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6 leading-tight">
           Hi, I&apos;m Hedi Amir Hmida
         </h1>
         <p className="text-white/80 max-w-2xl mb-8 text-lg leading-relaxed">
-          Backend / Full-Stack Developer (Working Student) and Master&apos;s student in Computer Science
-          at the University of Passau. I integrate AI into healthcare platforms, design reliable NestJS
-          backends, and ship React interfaces with a focus on architecture, testing, and user experience.
+          Backend / Full-Stack Developer and Master&apos;s student in Computer Science at the University
+          of Passau. I build reliable backends and React interfaces, and I previously shipped AI-powered
+          healthcare features at Oncare GmbH with Python, NestJS, and end-to-end tests.
         </p>
         <div className="flex flex-wrap gap-3">
           <a href="/projects" className="btn-primary">

@@ -6,7 +6,7 @@ export const metadata = { title: "About" };
 const skillGroups = [
   { title: "Languages", items: ["Python", "C", "C++", "Java", "JavaScript", "TypeScript", "PHP", "Dart"] },
   { title: "Frontend", items: ["React.js", "Next.js", "Tailwind CSS", "Flutter"] },
-  { title: "Backend", items: ["NestJS", "Node.js", "Express.js", "PHP", "Spring Boot"] },
+  { title: "Backend", items: ["NestJS", "Node.js", "Express.js", "Python", "Flask", "PHP", "Spring Boot"] },
   { title: "Databases", items: ["MySQL", "MongoDB", "Prisma ORM"] },
   { title: "Testing & QA", items: ["Playwright", "Postman", "JUnit", "Selenium"] },
   { title: "DevOps & Tools", items: ["Git", "GitHub", "Docker", "GitHub Actions", "AWS", "Vercel"] },
@@ -48,19 +48,19 @@ export default function AboutPage() {
         <div className="md:col-span-2 card p-6">
           <h2 className="text-xl font-bold mb-4 text-white">About me</h2>
           <p className="text-base text-white/85 leading-relaxed">
-            Master&apos;s student in Computer Science at the University of Passau and currently a Backend /
-            Full-Stack Developer (Working Student) at Oncare GmbH in Munich. I work on healthcare platforms
-            where I integrate AI into clinical workflows, connect internal microservices, and ship features
-            across NestJS/Express backends and React interfaces. Previously I delivered full-stack web and
-            mobile products during internships at Mammut Web Solutions.
+            Master&apos;s student in Computer Science at the University of Passau and a Backend / Full-Stack
+            Developer. At Oncare GmbH in Munich I integrated AI treatment recommendations into a production
+            healthcare platform, using Python/Flask to prepare patient data for LLM prompts and NestJS/Express
+            with React to ship the feature. I also delivered full-stack web and mobile products during
+            internships at Mammut Web Solutions.
           </p>
         </div>
         <div className="card p-6">
           <h3 className="text-lg font-semibold mb-3 text-white">Quick facts</h3>
           <ul className="text-base space-y-2 text-white/85 leading-relaxed">
-            <li>Location: Passau / Munich, Germany</li>
+            <li>Location: Passau, Germany</li>
             <li>Languages: English, Arabic, French, basic German</li>
-            <li>Currently: Working student at Oncare GmbH</li>
+            <li>Previously: Backend / Full-Stack Developer at Oncare GmbH</li>
             <li>Focus: Backend, Full-stack, AI integration</li>
           </ul>
         </div>
@@ -72,23 +72,28 @@ export default function AboutPage() {
           <article className="relative pl-5 border-l-2 border-[var(--accent)]/50">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
               <h3 className="font-semibold text-base text-white">Backend / Full-Stack Developer (Working Student)</h3>
-              <span className="text-sm text-[var(--accent)] font-medium">Mar 2026 – Present</span>
+              <span className="text-sm text-[var(--accent)] font-medium">Mar 2026 – Oct 2026</span>
             </div>
             <div className="text-base text-white/80 mb-2 font-medium">Oncare GmbH • Munich, Germany</div>
             <ul className="text-sm text-white/85 space-y-2 list-disc list-inside leading-relaxed">
               <li>
-                Integrated a CE-marked AI solution into the healthcare professional (HCP) platform by aggregating
-                and filtering patient data from multiple internal microservices, designing prompts for treatment
-                recommendations, and implementing AI-based summarization, multilingual translation, error handling,
-                and fallbacks for context-window and 12-language requirements.
+                Integrated an AI-powered treatment recommendation feature into a production healthcare platform,
+                retrieving patient data from multiple internal microservices, including wearable measurements,
+                medications, care tasks, and care pathways.
               </li>
               <li>
-                Built the feature across the stack with a NestJS/Express backend broker and a React-based HCP
-                interface, plus unit and end-to-end tests for reliable AI integration.
+                Developed Python/Flask workflows to collect, filter, and structure patient data for LLM prompts,
+                implementing AI-powered summarization to handle context-window limits and translation of
+                recommendations across 12 languages.
               </li>
               <li>
-                Contributed to an encrypted medical-data export for HCP offboarding and architectural updates to
-                the PADnext billing system.
+                Integrated AI workflows into the platform through a NestJS/Express backend and React interface,
+                implementing REST API communication, error handling, fallback mechanisms, and unit and end-to-end
+                tests.
+              </li>
+              <li>
+                Contributed to an AI-powered medical document OCR workflow using OpenAI and Gemini to extract
+                laboratory test names, values, and units from PDF reports.
               </li>
             </ul>
           </article>

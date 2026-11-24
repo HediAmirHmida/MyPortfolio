@@ -34,9 +34,8 @@ export default function ContactPage() {
     <section className="max-w-xl">
       <h1 className="text-3xl font-bold mb-3 text-white">Contact</h1>
       <p className="text-base text-white/80 mb-6 leading-relaxed">
-        I&apos;m currently a Backend / Full-Stack Developer (Working Student) at Oncare GmbH in Munich
-        and studying Computer Science in Passau. Reach me below for collaborations, questions, or
-        professional conversations.
+        I&apos;m a Backend / Full-Stack Developer and Master&apos;s student in Computer Science at the
+        University of Passau. Reach me below for collaborations, questions, or professional conversations.
       </p>
       <div className="space-y-3">
         <a href={`mailto:${siteConfig.email}`} className="card flex items-center gap-3 p-3 hover:border-[var(--accent)]/40 transition">
