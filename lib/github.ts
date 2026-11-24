@@ -31,6 +31,7 @@ const customDescriptions: Record<string, string> = {
   "RoboServe-Backend": "Node.js server backend for the RoboServe mobile app, handling order management, robot communication, and business logic.",
   "Schema-Matching": "A lightweight demo for schema matching and schema patching across structured datasets, built with Python for data integration workflows.",
   "Ignition_zone": "Vehicle Catalog Website - A full-stack web application built with HTML, CSS, JavaScript, and PHP that allows clients to browse a catalog of vehicles, including cars and motorcycles.",
+  "mcp-forge": "An agent pipeline that turns an OpenAPI spec into a working, tested MCP server. It generates the server, tests every tool against a mock API, uses an LLM to design better tools, and repairs failures automatically.",
 };
 
 // Technologies used in specific repositories
@@ -41,6 +42,7 @@ const projectTechnologies: Record<string, string[]> = {
   "Schema-Matching": ["Python", "Data Processing", "Schema Integration"],
   "Ignition_zone": ["HTML", "CSS", "JavaScript", "PHP", "Full-stack", "Vehicle Catalog"],
   "Task-Management-System-": ["Spring Boot", "Postman", "Java", "Backend"],
+  "mcp-forge": ["TypeScript", "Node.js", "MCP", "OpenAPI", "Zod", "Gemini", "Prism"],
 };
 
 export async function fetchGithubRepos(): Promise<Repo[]> {
